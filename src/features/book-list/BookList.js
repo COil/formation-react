@@ -12,7 +12,14 @@ const books = [
 
 const BookList = () => {
     return (
-        <h1>Livres</h1>
+        <>
+            <h1>Livres</h1>
+                <ul>
+                    { books.map(book => (
+                        <li>{ book.isbn } { book.author } { book.title } </li>
+                    )) }
+                </ul>
+        </>
     );
 };
 
